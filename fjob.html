@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найти работу | TRANSLATORS</title>
+    <link rel="stylesheet" href="fjob.css">
+    <link rel="shortcut icon" href="icon.png" />
+</head>
+<body>
+    <header class="cheader">
+    <div class="logo"><a href="index.html"><h2><b>TRANSLATORS</b></h2></a></div>
+    <nav class="nav-links">
+        <a href="fjob.html">Найти работу</a>
+        <a href="fworkers.html">Найти переводчика</a>
+        <div class="bl" id="authButtonContainer">
+            <!-- Здесь будет динамически меняться кнопка Вход/Выход -->
+            <a href="signIn.html" class="signinbutton" id="authButton">Вход</a>
+        </div>
+    </nav>
+</header>
+    
+    <main class="job-main">
+        <section class="job-search">
+            <h1>Найти работу переводчика</h1>
+            <div class="search-form">
+                <input type="text" placeholder="Язык, специализация, ключевые слова">
+                <button class="search-button">Поиск</button>
+                <button id="addNewJob" class="add-new-button">+ Добавить вакансию</button>
+            </div>
+        </section>
+            <div id="jobModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Добавить новую вакансию</h2>
+        <form id="jobForm">
+            <div class="form-group">
+                <label for="jobTitle">Название вакансии</label>
+                <input type="text" id="jobTitle" placeholder="Например: Перевод технической документации" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sourceLanguage">Исходный язык</label>
+                    <select id="sourceLanguage" required>
+                        <option value="">Выберите язык</option>
+                        <option value="Английский">Английский</option>
+                        <option value="Французский">Французский</option>
+                        <option value="Немецкий">Немецкий</option>
+                        <option value="Испанский">Испанский</option>
+                        <option value="Китайский">Китайский</option>
+                        <option value="Японский">Японский</option>
+                        <option value="Другой">Другой</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="targetLanguage">Целевой язык</label>
+                    <select id="targetLanguage" required>
+                        <option value="">Выберите язык</option>
+                        <option value="Русский">Русский</option>
+                        <option value="Английский">Английский</option>
+                        <option value="Украинский">Украинский</option>
+                        <option value="Казахский">Казахский</option>
+                        <option value="Другой">Другой</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="jobDescription">Описание работы</label>
+                <textarea id="jobDescription" rows="5" placeholder="Подробно опишите задание, требования к переводчику и особенности работы..." required></textarea>
+            </div>
+
+                <div class="form-group">
+                <label for="jobTitle">Телефон</label>
+                <input type="text" id="jobTitle" placeholder="Напишите свой телефон или телеграмм бля связи с переводчиком" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="jobBudget">Бюджет ($)</label>
+                    <input type="number" id="jobBudget" min="1" placeholder="Например: 500" required>
+                </div>
+                
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="cancel-button">Отмена</button>
+                <button type="submit" class="submit-button">Опубликовать вакансию</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+        <section class="job-listings">
+            <div class="job-card">
+                <h3>Перевод технической документации</h3>
+                <p class="language">Английский → Русский</p>
+                <p class="description">Необходим перевод руководства пользователя (15 000 слов) с английского на русский. Срок - 2 недели.</p>
+                <p class="description">+375(33)314-74-66</p>
+                <div class="job-meta">
+                    <span class="budget">$500</span>
+                    <span class="deadline">До 15 июня</span>
+                    <a href="#" class="apply-button">Откликнуться</a>
+                </div>
+            </div>
+            
+            <div class="job-card">
+                <h3>Литературный перевод</h3>
+                <p class="language">Французский → Русский</p>
+                <p class="description">Ищем переводчика для художественного романа. Опыт литературного перевода обязателен.</p>
+                <p class="description">+375(33)123-45-67</p>
+                <div class="job-meta">
+                    <span class="budget">$1200</span>
+                    <span class="deadline">До 30 июля</span>
+                    <a href="#" class="apply-button">Откликнуться</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="firebase-config.js"></script>
+</body>
+</html>

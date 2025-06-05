@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="signIn.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | TRANSLATORS</title>
+    <style>
+        body {
+            padding: 30px;
+            background: linear-gradient(to right, #000000, #191919);
+            font-family: Arial, sans-serif, bold;
+        }
+        h1 {
+            text-align: center;
+            color: #FFD300;
+        }
+        .user-info {
+            max-width: 500px;
+            margin: 30px auto;
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .info-row {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #ffffff;
+            display: inline-block;
+            width: 120px;
+        }
+        .info-value {
+            color: #FFD300;
+            font-weight: bold;
+        }
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: #FFD300;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        button:hover {
+            background-color: #deb900;
+            color: white;
+        }
+
+        
+    </style>
+    <script type="module" src="./homepage.js"></script>
+</head>
+<body>
+    <header class="cheader">
+        <div class="logo"><a href="index.html"><h2><b>TRANSLATORS</b></h2></a></div>
+        <nav class="nav-links">
+            <a href="fjob.html" class="active">Найти работу</a>
+            <a href="fworkers.html">Найти переводчика</a>
+        </nav>
+    </header>
+    <h1>Welcome to TRANSLATORS</h1>
+    
+    <div class="user-info">
+        <div class="info-row">
+            <span class="info-label">First Name:</span>
+            <span class="info-value" id="loggedUserFName"></span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Last Name:</span>
+            <span class="info-value" id="loggedUserLName"></span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Email:</span>
+            <span class="info-value" id="loggedUserEmail"></span>
+        </div>
+        <div class="info-row">
+        
+        </div>
+    </div>
+    
+    <button id="logout">Logout</button>
+</body>
+</html>

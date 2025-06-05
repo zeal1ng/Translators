@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | TRANSLATORS</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="shortcut icon" href="icon.png" />
+    <script type="module" src="firebase-config.js"></script>
+</head>
+<body>
+    <header class="cheader">
+    <div class="logo"><a href="index.html"><h2><b>TRANSLATORS</b></h2></a></div>
+    <nav class="nav-links">
+        <a href="fjob.html">Найти работу</a>
+        <a href="fworkers.html">Найти переводчика</a>
+        <div class="bl" id="authButtonContainer">
+            <!-- Здесь будет динамически меняться кнопка Вход/Выход -->
+            <a href="signIn.html" class="signinbutton" id="authButton">Вход</a>
+        </div>
+    </nav>
+</header>
+    <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+    <main class="auth-main" id="signUp">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>Создать аккаунт</h1>
+                <p>Присоединяйтесь к нашему сообществу</p>
+            </div>
+            
+            <form class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">Имя</label>
+                        <input type="text" id="first-name" placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Фамилия</label>
+                        <input type="text" id="last-name" placeholder="Введите фамилию">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Введите ваш email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="Придумайте пароль">
+                    <div class="password-hint">Минимум 8 символов</div>
+                </div>
+                
+                <div class="form-group">
+                    
+                </div>
+                
+                <div class="form-group">
+                    
+                </div>
+                
+                <div class="form-group checkbox">
+                    
+                </div>
+                
+                <button type="submit" class="auth-button" id="sumbitSignUp">Зарегистрироваться</button>
+            </form>
+            
+            <div class="auth-footer">
+                <div class="signin" id="signInButton">Уже есть аккаунт? <a href="signIn.html">Войти</a></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

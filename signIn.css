@@ -1,0 +1,417 @@
+:root {
+    --primary: #FFD300;
+    --primary-dark: #b18d00;
+    --bg: #000;
+    --card-bg: #1a1a1a;
+    --text: #fff;
+    --text-secondary: #aaa;
+    --border: #333;
+    --error: #ff4444;
+    --google: #DB4437;
+    --facebook: #4267B2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.messageDiv {
+    background-color: hsl(327, 90%, 28%);
+    color: white;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity:0;
+    animation: 5s forwards;
+    display:block;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Шапка */
+.cheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo h2 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.signinbutton {
+    background-color: var(--primary);
+    color: var(--bg);
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.signinbutton:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 211, 0, 0.2);
+}
+
+/* Основной контейнер */
+.auth-container {
+    display: flex;
+    min-height: calc(100vh - 80px);
+}
+
+.auth-wrapper {
+    flex: 1;
+    max-width: 500px;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-hero {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(255,211,0,0.1) 0%, rgba(0,0,0,0.8) 100%), 
+                url('hero.avif');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    padding: 40px;
+}
+
+/* Заголовок формы */
+.auth-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.auth-header h1 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.auth-header p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+/* Форма */
+.auth-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px 14px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background-color: var(--card-bg);
+    color: var(--text);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px   rgba(255, 211, 0, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    bottom: 14px;
+    font-size: 16px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+    color: var(--primary);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.remember-me input {
+    margin-right: 10px;
+    accent-color: var(--primary);
+}
+
+.remember-me label {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Кнопка входа */
+.auth-button {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--bg);
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.auth-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 211, 0, 0.2);
+}
+
+/* Разделитель */
+.divider {
+    position: relative;
+    margin: 25px 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--border);
+    z-index: 1;
+}
+
+.divider span {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+    background-color: var(--bg);
+    z-index: 2;
+    font-size: 14px;
+}
+
+/* Социальные кнопки */
+.social-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-button.google {
+    background-color: var(--google);
+    color: white;
+}
+
+.social-button.google:hover {
+    background-color: #c23321;
+    transform: translateY(-2px);
+}
+
+.social-button.facebook {
+    background-color: var(--facebook);
+    color: white;
+}
+
+.social-button.facebook:hover {
+    background-color: #3b5998;
+    transform: translateY(-2px);
+}
+
+/* Футер формы */
+.auth-footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Блок с преимуществами */
+.hero-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+}
+
+.feature span {
+    color: var(--primary);
+}
+
+/* Адаптивность */
+@media (min-width: 992px) {
+    .auth-hero {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .cheader {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .auth-wrapper {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-header h1 {
+        font-size: 24px;
+    }
+    
+    .input-group input {
+        padding: 12px 12px 12px 36px;
+    }
+    
+    .input-icon {
+        left: 12px;
+        bottom: 12px;
+    }
+}
+
+.logo a{
+    text-decoration: none;
+}

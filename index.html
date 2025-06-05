@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translators</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" />
+    <script src="https://www.gstatic.com/firebasejs/11.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <header class="cheader">
+    <div class="logo"><h2><b>TRANSLATORS</b></h2></div>
+    <nav class="nav-links">
+        <a href="fjob.html">Найти работу</a>
+        <a href="fworkers.html">Найти переводчика</a>
+        <div class="bl" id="authButtonContainer">
+            <!-- Здесь будет динамически меняться кнопка Вход/Выход -->
+            <a href="signIn.html" class="signinbutton" id="authButton">Вход</a>
+        </div>
+    </nav>
+</header>
+     <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+    <main class="main-content">
+        <section class="hero">
+            <h1>НАЙТИ ПЕРЕВОДЧИКА & ИНТЕРПРИТЁРА</h1>
+            <p>Связь клиентов с профессиональными переводчиками по всему миру.</p>
+            <a href="fjob.html" class="cta-button">НАЧАТЬ</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature-card">
+                <h2>ПРОСМОТР ВАКАНСИЙ</h2>
+                <p>Найдите проекты по переводу и отправьте свои предложения</p>
+                <a href="fjob.html" class="secondary-button">ПРИСОЕДИНЯЙТЕСЬ СЕЙЧАС</a>
+            </div>
+            
+            <div class="feature-card">
+                <h2>ПРИСОЕДИНЯЙТЕСЬ К НАШЕМУ СООБЩЕСТВУ</h2>
+                <p>Поделитесь опытом, советами и чувствами юмора с коллегами-переводчиками.</p>
+                <div class="community-post">
+                    <p><em>Клиент: Можете ли вы перевести этот документ к завтрашнему дню?</em></p>
+                    <p><em>Переводчик: Конечно, я сначала изобрету машину времени.</em></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="firebase-config.js"></script>
+</body>
+</html>

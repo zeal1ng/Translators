@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найти переводчика | TRANSLATORS</title>
+    <link rel="stylesheet" href="fworkers.css">
+    <link rel="shortcut icon" href="icon.png" />
+</head>
+<body>
+    <header class="cheader">
+    <div class="logo"><a href="index.html"><h2><b>TRANSLATORS</b></h2></a></div>
+    <nav class="nav-links">
+        <a href="fjob.html">Найти работу</a>
+        <a href="fworkers.html">Найти переводчика</a>
+        <div class="bl" id="authButtonContainer">
+            <!-- Здесь будет динамически меняться кнопка Вход/Выход -->
+            <a href="signIn.html" class="signinbutton" id="authButton">Вход</a>
+        </div>
+    </nav>
+</header>
+    
+    <main class="workers-main">
+        <section class="workers-search">
+            <h1>НАЙТИ ПЕРЕВОДЧИКА & ИНТЕРПРИТЁРА</h1>
+            <p>Связь клиентов с профессиональными переводчиками по всему миру.</p>
+            <div class="search-form">
+                <input type="text" placeholder="Язык, специализация, ключевые слова">
+                
+                <button class="search-button">Поиск</button>
+                <button id="addNewJob" class="add-new-button">+ </button>
+            </div>
+        </section>
+        <div id="jobModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Добавить новую вакансию</h2>
+        <form id="jobForm">
+            <div class="form-group">
+                <label for="jobTitle">Название вакансии</label>
+                <input type="text" id="jobTitle" placeholder="Например: Перевод технической документации" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sourceLanguage">Спектр языков</label>
+                    <input type="text" id="jobTitle" placeholder="Напишите языки на которых можете работать" required>
+                </div>
+                
+            </div>
+            
+            <div class="form-group">
+                <label for="jobDescription">О себе</label>
+                <textarea id="jobDescription" rows="5" placeholder="Напишите про себя: опыт работы, " required></textarea>
+            </div>
+
+                <div class="form-group">
+                <label for="jobTitle">Телефон</label>
+                <input type="text" id="jobTitle" placeholder="Напишите свой телефон или телеграмм для связи с заказчиком" required>
+            </div>
+            
+            <div class="form-row">
+                
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="cancel-button">Отмена</button>
+                <button type="submit" class="submit-button">Опубликовать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+        <section class="workers-list">
+            <div class="worker-card">
+                <div class="worker-photo" style="background-image: url('woman.jpg')"></div>
+                <h3>Чи ше</h3>
+                <p class="specialization">Английский, Немецкий → Русский</p>
+                <p class="specialization">+375(33)123-45-67</p>
+                <div class="rating">
+                    
+                </div>
+                <div class="badges">
+                    
+                </div>
+                <div class="skills">
+                    <span>Технический перевод</span>
+                    <span>Медицинский перевод</span>
+                    
+                </div>
+                <a href="#" class="contact-button">Связаться</a>
+            </div>
+            
+            <div class="worker-card">
+                <div class="worker-photo" style="background-image: url('man.jpg')"></div>
+                <h3>Иванченко Анан</h3>
+                <p class="specialization">Французский, Испанский → Русский</p>
+                <p class="specialization">+375(33)123-45-67</p>
+                <div class="rating">
+                
+                </div>
+                <div class="badges">
+                </div>
+                <div class="skills">
+                    <span>Литературный перевод</span>
+                    <span>Субтитры</span>
+                    <span>Локализация</span>
+                </div>
+                <a href="#" class="contact-button">Связаться</a>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="firebase-config.js"></script>
+</body>
+</html>

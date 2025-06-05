@@ -1,0 +1,168 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Шапка */
+.cheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000;
+}
+
+.logo h2 {
+  color: #FFD300;
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #FFD300;
+}
+
+.bl a{
+  color:black;
+}
+.bl:hover a {
+  color: rgb(255, 255, 255);
+}
+.signinbutton {
+  background-color: #FFD300;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.signinbutton:hover {
+  background-color: #b18d00;
+  color: #ffffff;
+}
+
+/* Основной контент */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+  cursor: default;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #FFD300;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #FFD300;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.5s;
+}
+
+
+.cta-button:hover {
+  background-color: #b18d00;
+  color: #fff;
+}
+
+/* Карточки возможностей */
+.features {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 30px;
+  width: 45%;
+  min-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h2 {
+  color: #FFD300;
+  margin-top: 0;
+}
+
+.secondary-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #FFD300;
+  padding: 8px 20px;
+  border: 2px solid #FFD300;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-top: 15px;
+}
+
+.secondary-button:hover {
+  background-color: #FFD300;
+  color: #000;
+}
+
+.community-post {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .cheader {
+      flex-direction: column;
+      padding: 15px;
+  }
+  
+  .nav-links {
+      margin-top: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .feature-card {
+      width: 100%;
+  }
+}
